@@ -1,2 +1,154 @@
-hello world
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    *{
+        padding: 0;margin: 0;
+    }
+   ul,ol{
+       list-style: none;
+   }
+    a{
+        text-decoration: none;
+    }
+    .box{
+        width: 582px;
+        height: 248px;
+        position: relative;
+        margin: 50px auto;
+        overflow: hidden;
+    }
+    .box .pic{
+        width: 9999px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .box ul li{
+        float: left;
+        width: 582px;
+        height: 248px;
+
+    }
+    .btn a{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 60px;
+        background: rgba(0, 0, 0, .4);
+        color: #ffffff;
+        text-align: center;
+        line-height: 60px;
+        font-size: 16px;
+    }
+    .btn a:first-child{
+        left: 10px;
+    }
+    .btn a:last-child{
+        right: 10px;
+    }
+    .box .circle{
+        width: 150px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+    }
+    .box .circle ol {
+        width: 999px;
+    }
+
+    .box .circle ol li{
+        float: left;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, .4);
+    }
+   .circle ol li.cir{
+        background-color: aquamarine;
+        
+    } 
+   
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+            <ul class="pic" id="pic">
+                <li><img src="mhxy/5b852aab8b74278333b7cbd11SKrh3Z5.jpg" alt=""></li>
+                <li><img src="mhxy/5b938f94143cfac2d9ff6567V1B7POr2.jpg" alt=""></li>
+                <li><img src="mhxy/5b98745396dee478619b76feseAi8zNy.jpg" alt=""></li>
+                <li><img src="mhxy/5b99d3278b74272a4560198aZJhotLQM.jpg" alt=""></li>
+            </ul>
+        <div class="btn">
+            <a href="javascript:void(0)" id="le">&lt;</a>
+            <a href="javascript:void(0)" id="ri">&gt;</a>
+        </div>
+        <div class="circle" id="circle">
+            <ol>
+                <li class="cir"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <script src="JQ/jquery-1.12.3.min.js"></script>
+    <script>
+        var $unit=$("#pic");
+        var $le=$("#le");
+        var $ri=$("#ri");
+        var $circle=$("#circle ol li");
+        var length=$circle.length;
+        var idx=0;
+        // var timer=setInterval(dsq,2000);
+
+        $unit.children("li:first").clone().appendTo($unit);
+        
+        $ri.click(dsq);
+        function dsq(){
+            if($unit.is(":animated")){
+                return;
+            }
+            idx++;
+            $unit.stop(true).animate({"left":-582*idx},600,function(){
+                // if的作用是判断边界，并且让unit回归初始值
+                if(idx>length-1){
+                    idx=0;
+                    $unit.css("left",0);
+                }
+                $circle.eq(idx).addClass("cir").siblings().removeClass("cir");
+            })
+        }
+        $le.click(function(){
+            if($unit.is(":animated")){
+                return;
+            }
+            idx--;
+            if(idx<0){
+                idx=length-1;
+                $unit.css("left",-582*length);
+            }
+            $unit.animate({"left":-582*idx},600)
+            $circle.eq(idx).addClass("cir").siblings().removeClass("cir");
+
+        })
+    
+    $circle.mouseenter(function(){
+        $(this).addClass("cir").siblings().removeClass("cir");
+        idx=$(this).index();
+        $unit.stop(true).animate({"left":-582*idx},600);
+    })
+    
+    
+    </script>
+</body>
+</html>
