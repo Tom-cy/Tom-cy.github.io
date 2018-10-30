@@ -1,9 +1,7 @@
-(function init() {
-    
-    var img = document.getElementsByTagName("img")[0];
-    var imgW = document.documentElement.clientWidth;
-    var imgH = document.documentElement.clientHeight;
-    img.width = imgW;
-    img.height = imgH;
-
-})();
+*{
+    padding: 0;margin: 0;
+}
+canvas{
+    background-image: url(imgs/1.jpg);
+    background-size: cover;
+}
