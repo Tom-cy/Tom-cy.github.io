@@ -13,7 +13,7 @@
         }
 
         canvas {
-            background-image: url(imgs/1.jpg);
+            background-image: url(imgs/1.1.jpg);
             background-size: cover;
         }
     </style>
@@ -26,9 +26,10 @@
         var ctx = canvas.getContext("2d");
         var width = window.innerWidth;
         var height = window.innerHeight;
-         
+
         canvas.width = width;
         canvas.height = height;
+
         var count = 0;
         var meteors = new Array();
 
@@ -39,8 +40,13 @@
             this.h = h;
             this.speed_x = -(5 + Math.random() * 5);
             this.speed_y = -this.speed_x;
-            this.len = Math.random() * 300 + 100;
+            this.len = parseInt(Math.random() * 80) + 50;
+ 
+//             this.a = .9; //初始透明度
+//             this.va = 0.96; //透明度的变化系数
+//             this.l = random(height * 0.8, height * 0.9); //下落的高度 -->
         }
+
 
         Meteor.prototype.draw = function () {
             var ctx = this.ctx;
@@ -58,7 +64,6 @@
             ctx.restore();
         }
 
-
         Meteor.prototype.flow = function () {
             if (this.x < -this.len || this.y > this.h + this.len) {
                 return false;
@@ -66,17 +71,38 @@
             this.x += this.speed_x * 0.5;
             this.y += this.speed_y * 0.5;
             return true;
+        }   
+        // function circle() {
+        //     if (this.y > this.l) {
+        //         ctx.beginPath();
+        //         ctx.arc(this.x, this.y, 1, 0, 2 * Math.PI, false);
+        //         ctx.strokeStyle = "rgba(0,255,255," + this.a + ")";
+        //         ctx.stroke();
+        //     }
+        // }
+        // 定义随机方法
+        function random(min, max) {
+            return Math.random() * (max - min) + min;
         }
 
+        function font() {
+            this.ctx.font = "22px 宋体";
+            this.ctx.fillStyle = "red";
+            this.ctx.fillText("吧唧吧唧大仙", 330, 140);
+            this.ctx.font = "22px 宋体";
+            this.ctx.fillStyle = "red";
+            this.ctx.fillText("磨叽磨叽巫女", 180, 130);
+        }
 
         function meteorGenerator() {
 
-            var x = Math.random() * width;
+            var x = Math.random() * width + 300;
             meteors.push(new Meteor(ctx, x, height));
-
             setTimeout(function () {
                 meteorGenerator()
+
             }, Math.random() * 1000);
+
         }
 
         function meteorStart() {
@@ -86,6 +112,7 @@
                 if (meteor.flow()) {
                     if (count % 30 == 0) {
                         meteor.ctx.clearRect(0, 0, width, height);
+                        font();
                     }
                     meteor.draw();
                 } else {
