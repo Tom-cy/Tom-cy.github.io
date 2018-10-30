@@ -86,12 +86,12 @@
         }
 
         function font() {
-            this.ctx.font = "22px 宋体";
+            this.ctx.font = "16px 宋体";
             this.ctx.fillStyle = "red";
             this.ctx.fillText("吧唧吧唧大仙", 330, 140);
-            this.ctx.font = "22px 宋体";
+            this.ctx.font = "16px 宋体";
             this.ctx.fillStyle = "red";
-            this.ctx.fillText("磨叽磨叽巫女", 180, 130);
+            this.ctx.fillText("磨叽磨叽巫女", 200, 150);
         }
 
         function meteorGenerator() {
@@ -112,8 +112,8 @@
                 if (meteor.flow()) {
                     if (count % 30 == 0) {
                         meteor.ctx.clearRect(0, 0, width, height);
-                        font();
                     }
+                    font();
                     meteor.draw();
                 } else {
                     arr.splice(index, 1);
