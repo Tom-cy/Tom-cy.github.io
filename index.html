@@ -1,1 +1,67 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>姥姥不喜舅舅不爱</title><link href=.//static/css/app.5efc154bfa0d4dacf7c2d0e04896d410.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src="https://s5.cnzz.com/z_stat.php?id=1277753109&web_id=1277753109"></script><script type=text/javascript src=.//static/js/manifest.1850c8c7a89ff3ed4ada.js></script><script type=text/javascript src=.//static/js/vendor.7487a1d582b825a621b4.js></script><script type=text/javascript src=.//static/js/app.5cf72dbd618e39f79cd7.js></script></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script>
+    function IsPC() {
+      var userAgentInfo = navigator.userAgent;
+      var Agents = ["Android", "iPhone",
+        "SymbianOS", "Windows Phone",
+        "iPad", "iPod"
+      ];
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          break;
+        }
+      }
+      return flag;
+    }
+
+    var flag = IsPC(); //true为PC端，false为手机端
+    window.location.href = "./1.html"
+  </script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      font-size: 62.5%;
+      /*100 ÷ 16 × 100% = 625%*/
+    }
+
+    .demo {
+      position: relative;
+      width: 100%;
+    }
+
+    .bjimg {
+      width: 100%;
+    }
+
+    .aimg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 253rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="demo">
+    <img class="bjimg" src="./img/bj1200.png" alt="">
+    <a class="aimg" href="http://kuihua.tmall.com/p/rd022548.htm"><img src="./img/but2x.png" alt=""></a>
+
+  </div>
+</body>
+
+</html>
