@@ -13,9 +13,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /* width: 12rem; */
-  /* margin: 0 auto; */
+  width: 12rem;
+  margin: 0 auto;
+  background-color: #fff2be;
 }
+
+
 
 h3,
 p {
@@ -24,7 +27,6 @@ p {
 }
 
 body {
-  background-color: #fff;
   font-family: 'Open Sans', "Microsoft YaHei", Verdana, sans-serif;
   font-size: 0.16rem;
 }
