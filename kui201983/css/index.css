@@ -42,11 +42,8 @@ body {
 .aimg {
   position: absolute;
   left: 50%;
-  /* transform: translateX(-50%); */
+  margin-left: -400px;
   top: 90%;
-  right: 0;
-  bottom: 0;
-  margin-left: -450px;
 }
 
 .aimg img {
