@@ -1,2 +1,0 @@
-webpackJsonp([21],{DrEt:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var l={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("产品管理/商品")])},staticRenderFns:[]},r=n("VU/8")(null,l,!1,null,null,null);t.default=r.exports}});
-//# sourceMappingURL=21.f3fb5d8b3ff692fbde21.js.map
