@@ -1,0 +1,21 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1572852222100'); /* IE9 */
+  src: url('iconfont.eot?t=1572852222100#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQUAAsAAAAACLAAAAPFAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqFOIRsATYCJAMICwYABCAFhG0HMhuUB8iusCnD9tB7VCnlDdsY3iXHz+Gd7hhDhq3lLPx1v0SkCBUQOQKSJEwrEVSriCSQbCrv/uf0tx3R83QjW3IDYhu6EFwuI3TRBaEGaCdLEB3aXG5TxENaPcFY6QYdpFmAI1K/4neBP7rZnpxnfPf/VDqmTdHlIS/xesBi3z9M5IA1slzaDvj/OWa6fD6w/EAjm1F2UAXtjQc0sMy75iMKkAPzewwn6itgFfEyEIAqS+5ILWb7WLThcBsBkHmVIYs2lxKPwRFCIoWcDZAFikRhhF4ApvTfJ398UwWgFBmYkzhc0cT8Z1BM7pbRVRFglacHcLsEMIA7gAPphBrj5cygO0b1E2xiC+3KJPAW/7LKbO0/HkCAlIBCdYY1Z44TS2aPqpCK73OAEeABSCtXDGBUSero0xDqQkk047Nch4empFRqFqku9hiZ2+6crpsbfg/63sl9LVX6n+6jMV4mSSA4fzgMv9G9W9+v3ipy8Zs1+ivtHDO4W4U96Ih/UOXmsZui2GWMnh6fpIaktmhUzCKszutDJf3k7DSrCI4DU5YM8Ky+8KBxv2GymJjIImxSi02gqWp6aiUv4xJ31/aknkI5R/8ca/dPl8Jj1yFxZ+es6auXd/FINE5XakTMdHURGW9Z0BlXLMhXqYUfwVEUWr7N/x/b0se5hglW1xMi1ExjV+3Vzd8Zsr6wJSyAxsYOx/1y9qtTtrnJRomm0pUaO6bthW5sUMbrE3RWI/ylD3MPDdKtZbVN3bCB7lVnp1UVnW5s4/T3NWzGEyT/M03A/2e6BrdVfQ7jwc0M0x1cjtk+2/qrosJkJSW0Bxa2oPp4SKWVwpZmk9cs8K8pdTjESjPKw3iftnzmsF+EEQDkU77Oe/ivCJjWTr8KeoP+hBoHADx8/Nc3yKcA60BArEkTgTOClbKJfzmoovFmhUapB0Zrmq9KHkCGVl2vec0GYOsJcWcxoFRYACPYIznWHRTU+INECAVVbmIvq9FTK4eEEoCrAQBC2zpQmg6A0XaJ5NgXUDD0CxLtlEFVetK7U41jmqhG1qLMqIFyBZYa+Lqk4Q4j8xCNxJXJydHxp0ix5YGSp7c3soY+UhkH4nOjzKyDToEHq/A6dN0AQgpsVDlvMoeTBa/ysC/Kq4EnOkQiSMaQBhS7AqqoAj5dnc46fD9/CBkSLhnFNPxQnkIkZs0PfHjyToFcE/qpGrZlcZ1zhrJ6TBebypGAB8QwPXIpGADV4atsSMXyKnP4Q5O8eLvytMJ8/WJv6c4AqEIZTbScQQzqTSRMPCEAAAAA') format('woff2'),
+  url('iconfont.woff?t=1572852222100') format('woff'),
+  url('iconfont.ttf?t=1572852222100') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1572852222100#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ethereum:before {
+  content: "\e604";
+}
+
