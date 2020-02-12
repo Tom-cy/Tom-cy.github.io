@@ -51,7 +51,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<!--\n * @Author: your name\n * @Date: 2020-02-12 10:04:41\n * @LastEditTime : 2020-02-12 10:37:50\n * @LastEditors  : Please set LastEditors\n * @Description: In User Settings Edit\n * @FilePath: \\douyin\\src\\app\\app.component.html\n -->\n<div class=\"page\"  >\n  <button (click)=\"gotoUser()\">进入人物</button>\n  <button (click)=\"gotoPruduct()\">进入作品</button>\n  <button (click)=\"gotolive()\">进入直播</button>\n</div>\n<router-outlet></router-outlet>\n";
+    __webpack_exports__["default"] = "<!--\n * @Author: your name\n * @Date: 2020-02-12 10:04:41\n * @LastEditTime : 2020-02-12 12:26:00\n * @LastEditors  : Please set LastEditors\n * @Description: In User Settings Edit\n * @FilePath: \\douyin\\src\\app\\app.component.html\n -->\n<div class=\"page\"  >\n  <button (click)=\"gotoUser()\">进入人物</button>\n  <!-- <button (click)=\"gotoPruduct()\">进入作品</button> -->\n  <button (click)=\"gotolive()\">进入直播</button>\n</div>\n<router-outlet></router-outlet>\n";
     /***/
   },
 
@@ -724,7 +724,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*
      * @Author: your name
      * @Date: 2020-02-12 10:04:41
-     * @LastEditTime : 2020-02-12 10:53:06
+     * @LastEditTime : 2020-02-12 12:27:22
      * @LastEditors  : Please set LastEditors
      * @Description: In User Settings Edit
      * @FilePath: \douyin\src\app\app.component.ts
@@ -739,23 +739,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.http = http;
         this.title = "douyin";
-        this.UserUrl = "snssdk1128://user/profile/98726798113";
-      }
+      } // const Gf = "https://v.douyin.com/pwjYbJ/";
+      // \?refer=web&gd_label=click_wap_profile_follow&type=need_follow&needlaunchlog=1
+
 
       _createClass(AppComponent, [{
         key: "gotoUser",
         value: function gotoUser() {
-          // const UserNumber = "98726798113";
-          // console.log(this.UserUrl + UserNumber);
-          // const Gf = "https://v.douyin.com/pwjYbJ/";
-          window.location.href = this.UserUrl;
+          console.log("gotoUser");
+          var UserUrl = "https://v.douyin.com/808804130/";
+          window.location.href = UserUrl;
         }
       }, {
         key: "gotoPruduct",
-        value: function gotoPruduct() {}
+        value: function gotoPruduct() {
+          console.log("gotoPruduct");
+          var goPruduct = "snssdk1128://aweme/detail/6781402505889778948";
+          window.location.href = goPruduct;
+        }
       }, {
         key: "gotolive",
-        value: function gotolive() {}
+        value: function gotolive() {
+          console.log("gotolive");
+          var goLive = "https://v.douyin.com/pw4UcN/";
+          window.location.href = goLive;
+        }
       }]);
 
       return AppComponent;
