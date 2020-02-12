@@ -724,7 +724,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*
      * @Author: your name
      * @Date: 2020-02-12 10:04:41
-     * @LastEditTime : 2020-02-12 12:27:22
+     * @LastEditTime : 2020-02-12 12:46:07
      * @LastEditors  : Please set LastEditors
      * @Description: In User Settings Edit
      * @FilePath: \douyin\src\app\app.component.ts
@@ -739,15 +739,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.http = http;
         this.title = "douyin";
-      } // const Gf = "https://v.douyin.com/pwjYbJ/";
-      // \?refer=web&gd_label=click_wap_profile_follow&type=need_follow&needlaunchlog=1
-
+      }
 
       _createClass(AppComponent, [{
         key: "gotoUser",
         value: function gotoUser() {
           console.log("gotoUser");
-          var UserUrl = "https://v.douyin.com/808804130/";
+          var UserUrl = "https://v.douyin.com/96882403273/";
           window.location.href = UserUrl;
         }
       }, {

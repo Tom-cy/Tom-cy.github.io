@@ -325,7 +325,7 @@ __webpack_require__.r(__webpack_exports__);
 /*
  * @Author: your name
  * @Date: 2020-02-12 10:04:41
- * @LastEditTime : 2020-02-12 12:27:22
+ * @LastEditTime : 2020-02-12 12:46:07
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \douyin\src\app\app.component.ts
@@ -337,11 +337,9 @@ let AppComponent = class AppComponent {
         this.http = http;
         this.title = "douyin";
     }
-    // const Gf = "https://v.douyin.com/pwjYbJ/";
-    // \?refer=web&gd_label=click_wap_profile_follow&type=need_follow&needlaunchlog=1
     gotoUser() {
         console.log("gotoUser");
-        let UserUrl = "https://v.douyin.com/808804130/";
+        let UserUrl = "https://v.douyin.com/96882403273/";
         window.location.href = UserUrl;
     }
     gotoPruduct() {
